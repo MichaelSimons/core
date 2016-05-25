@@ -1,6 +1,6 @@
 FROM nanoserver
 
-# Install .NET Core SDK
+# Install .NET Core
 ENV DOTNET_CORE_SDK_VERSION 1.0.0-rc2-3002702
 ADD https://dotnetcli.blob.core.windows.net/dotnet/beta/Binaries/$DOTNET_CORE_SDK_VERSION/dotnet-win-x64.$DOTNET_CORE_SDK_VERSION.zip dotnet.zip
 RUN powershell -NoProfile [System.IO.Compression.ZipFile]::ExtractToDirectory('dotnet.zip', '%ProgramFiles%\dotnet')
